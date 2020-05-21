@@ -14,7 +14,7 @@
 </style>
 </head>
 <body>
-<h1> Avoiding Full Screen: XAM TEAM </h1>
+<h1> Avoiding Full Screen: XAM TEAM  2.0</h1>
     <div id="videoContainer" style="position:absolute;background-color:black;">
         <video id="videoId" style="height:240;width:320;" controls  src="test.mp4"></video>
     </div>
@@ -22,8 +22,9 @@
 
     <script>
         window.addEventListener("webkitfullscreenchange", function () {   
-            var element = document.getElementById('videoId');
-            element.webkitExitFullscreen();
+            // var element = document.getElementById('videoId');
+            // element.webkitExitFullscreen();
+             document.exitFullscreen()
     // if(!document.webkitIsFullScreen) {
     //     // Restore CSS properties here which in this case is as follows :
     //     var element = document.getElementById('videoId');
