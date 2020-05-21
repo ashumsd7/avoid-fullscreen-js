@@ -1,37 +1,61 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Avoid  full screen</title>
-<style>
-
-    video{
-        width:300px;
-        height: 300px;
-    }
-</style>
+    <title>Avoid full screen</title>
+    <style>
+        video {
+            width: 300px;
+            height: 300px;
+        }
+    </style>
 </head>
+
 <body>
-<h1> Avoiding Full Screen: XAM TEAM  2.0</h1>
+    <h1> Avoiding Full Screen: XAM TEAM 2.0</h1>
     <div id="videoContainer" style="position:absolute;background-color:black;">
-        <video id="videoId" style="height:240;width:320;" controls  src="test.mp4"></video>
+        <video id="videoId" style="height:240;width:320;" controls src="test.mp4"></video>
     </div>
-    
+
 
     <script>
-        window.addEventListener("webkitfullscreenchange", function () {   
+
+
+
+
+
+        window.addEventListener("webkitfullscreenchange", function () {
+
+            if (document.fullscreenElement) {
+                document.exitFullscreen()
+                    .then(() => console.log("Document Exited form Full screen mode"))
+                    .catch((err) => console.error(err))
+            } else {
+                document.documentElement.requestFullscreen()
+            }
+
+
+
+
+
+
+
+
+
+
             // var element = document.getElementById('videoId');
             // element.webkitExitFullscreen();
-             document.exitFullscreen()
-    // if(!document.webkitIsFullScreen) {
-    //     // Restore CSS properties here which in this case is as follows :
-    //     var element = document.getElementById('videoId');
-    //     element.style.height=240;
-    //     element.style.width=320;
-    // }
-    }, false);
+
+            // if(!document.webkitIsFullScreen) {
+            //     // Restore CSS properties here which in this case is as follows :
+            //     var element = document.getElementById('videoId');
+            //     element.style.height=240;
+            //     element.style.width=320;
+            // }
+        }, false);
     </script>
 </body>
+
 </html>
