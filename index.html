@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Avoid full screen</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
     <style>
         video {
             width: 300px;
@@ -14,7 +15,7 @@
 </head>
 
 <body>
-    <h1> Avoiding Full Screen: XAM TEAM 4.0 </h1>
+    <h1> Avoiding Full Screen: XAM TEAM 5.0 </h1>
     <div id="videoContainer" style="position:absolute;background-color:black;">
         <video id="videoId" style="height:240;width:320;" controls src="test.mp4"></video>
     </div>
@@ -28,8 +29,8 @@
 
         window.addEventListener("webkitfullscreenchange", function () {
 
-
-            if (document.fullscreen) { document.webkitExitFullscreen(); }
+            $('#videoId').get(0).webkitExitFullscreen();
+            // if (document.fullscreen) { document.webkitExitFullscreen(); }
 
             // if (document.fullscreenElement) {
             //     document.exitFullscreen()
