@@ -15,7 +15,7 @@
 </head>
 
 <body>
-    <h1> Avoiding Full Screen: XAM TEAM 5.0 </h1>
+    <h1> Avoiding Full Screen: XAM TEAM 6.0 </h1>
     <div id="videoContainer" style="position:absolute;background-color:black;">
         <video id="videoId" style="height:240;width:320;" controls src="test.mp4"></video>
     </div>
@@ -29,7 +29,7 @@
 
         window.addEventListener("webkitfullscreenchange", function () {
 
-            $('#videoId').get(0).webkitExitFullscreen();
+            $('video').get(0).webkitExitFullscreen();
             // if (document.fullscreen) { document.webkitExitFullscreen(); }
 
             // if (document.fullscreenElement) {
