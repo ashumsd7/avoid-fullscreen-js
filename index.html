@@ -14,20 +14,19 @@
 </head>
 <body>
     <div id="videoContainer" style="position:absolute;background-color:black;">
-        <video id="videoId" style="height:240;width:320;" controls ondblclick="enterFullScreen('videoId')" src="test.mp4"></video>
+        <video id="videoId" style="height:240;width:320;" controls  src="test.mp4"></video>
     </div>
     
 
     <script>
-        document.addEventListener("webkitfullscreenchange", function () {
-           
-    if(!document.webkitIsFullScreen) {
-      
-        // Restore CSS properties here which in this case is as follows :
-        var element = document.getElementById('videoId');
-        element.style.height=240;
-        element.style.width=320;
-    }
+        window.addEventListener("webkitfullscreenchange", function () {   
+           document.webkitExitFullscreen();
+    // if(!document.webkitIsFullScreen) {
+    //     // Restore CSS properties here which in this case is as follows :
+    //     var element = document.getElementById('videoId');
+    //     element.style.height=240;
+    //     element.style.width=320;
+    // }
     }, false);
     </script>
 </body>
