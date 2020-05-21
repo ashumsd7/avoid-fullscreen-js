@@ -1,0 +1,34 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avoid  full screen</title>
+<style>
+    video{
+        width:300px;
+        height: 300px;
+    }
+</style>
+</head>
+<body>
+    <div id="videoContainer" style="position:absolute;background-color:black;">
+        <video id="videoId" style="height:240;width:320;" controls ondblclick="enterFullScreen('videoId')" src="test.mp4"></video>
+    </div>
+    
+
+    <script>
+        document.addEventListener("webkitfullscreenchange", function () {
+            alert("!");
+    if(!document.webkitIsFullScreen) {
+        alert("!!");
+        // Restore CSS properties here which in this case is as follows :
+        var element = document.getElementById('videoId');
+        element.style.height=240;
+        element.style.width=320;
+    }
+    }, false);
+    </script>
+</body>
+</html>
