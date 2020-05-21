@@ -20,7 +20,8 @@
 
     <script>
         window.addEventListener("webkitfullscreenchange", function () {   
-           document.webkitExitFullscreen();
+            var element = document.getElementById('videoId');
+            element.webkitExitFullscreen();
     // if(!document.webkitIsFullScreen) {
     //     // Restore CSS properties here which in this case is as follows :
     //     var element = document.getElementById('videoId');
